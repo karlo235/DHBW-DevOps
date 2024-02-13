@@ -1,4 +1,4 @@
-module github.com/user/repo
+module github.com/karlo235/DHBW-DevOps
 
 go 1.21.6
 
