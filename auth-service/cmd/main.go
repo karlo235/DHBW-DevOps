@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/karlo235/DHBW-DevOps/internal"
+	"github.com/karlo235/DHBW-DevOps/auth-service/internal"
 )
 
 func main() {
@@ -15,13 +15,6 @@ func main() {
 	// Auth Service
 	router.HandleFunc("/auth/login", internal.AuthLoginHandler).Methods("POST")
 	router.HandleFunc("/auth/logout", internal.AuthLogoutHandler).Methods("POST")
-
-	// Product Service
-	router.HandleFunc("/products", internal.ProductListHandler).Methods("GET")
-	router.HandleFunc("/products/{id}", internal.ProductDetailHandler).Methods("GET")
-
-	// Checkout Service
-	router.HandleFunc("/checkout/placeorder", internal.CheckoutPlaceOrderHandler).Methods("POST")
 
 	port := 8080
 	log.Printf("Server is running on port %d...\n", port)
