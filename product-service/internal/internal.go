@@ -19,6 +19,7 @@ var products = []Product{
 	{ID: 1, Name: "Pants", Price: 19.99},
 	{ID: 2, Name: "Dress", Price: 29.99},
 	{ID: 3, Name: "Shirt", Price: 39.99},
+	{ID: 4, Name: "Hat", Price: 19.99},
 }
 
 func FindProductByID(products []Product, id int) *Product {
