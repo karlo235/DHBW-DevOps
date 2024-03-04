@@ -22,11 +22,3 @@ func CreateToken(username string) (string, error) {
 
 	return tokenString, nil
 }
-
-func VerifyToken(tokenString string) bool {
-	token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
-		return secretKey, nil
-	})
-
-	return err == nil && token.Valid
-}
