@@ -1,5 +1,6 @@
 FROM golang:1.22.0 AS builder
 
+ARG SERVICE_NAME
 WORKDIR /app
 COPY go.mod .
 COPY go.sum .
@@ -7,7 +8,7 @@ COPY go.sum .
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 go build ./cmd/main.go
+RUN CGO_ENABLED=0 go build ./${SERVICE_NAME}/cmd/main.go
 
 FROM alpine:3.19.1 AS production
 WORKDIR /app
