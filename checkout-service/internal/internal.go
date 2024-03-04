@@ -1,12 +1,8 @@
 package internal
 
 import (
-	"encoding/json"
-	"fmt"
 	"net/http"
-	"strconv"
 
-	"github.com/gorilla/mux"
 	"github.com/karlo235/DHBW-DevOps/checkout-service/pkg"
 )
 

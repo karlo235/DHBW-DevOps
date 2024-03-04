@@ -1,8 +1,6 @@
 package pkg
 
 import (
-	"time"
-
 	"github.com/golang-jwt/jwt"
 )
 
