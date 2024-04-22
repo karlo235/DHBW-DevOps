@@ -8,11 +8,11 @@ Luxify is a simple clothes webshop developed with the Go programming language.
 ### Build the Application
 Navigate to the root directory of the application and run the following command:
 ```bash
-make build
+make build service=<service>
 ```
 
 ### Run the Application
-After building the application, it can be run using the following command:
+After building the application, navigate into the folder of the service you built and run it using the following command:
 ```bash
 go run main.go
 ```
